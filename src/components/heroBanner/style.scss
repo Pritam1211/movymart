@@ -1,0 +1,110 @@
+@import "../../utils/mixins.scss";
+
+.hero-banner {
+  width: 100%;
+  height: 60vw;
+  background-color: var(--black);
+  position: relative;
+
+  .backdrop-img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+
+    .banner{
+      position: relative;
+      width: 100%;
+      height: 100%;
+    
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        opacity: 0.5;
+      }
+      .banner-content {
+        position: absolute;
+        left: 3vw;
+        top: 50%;
+        max-width: 70%;
+        height: 10%;
+        padding: 10px 10px;
+        color: white;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        gap: 1vh;
+
+        @include md {
+          max-width: 70%;
+          bottom: 18vh;
+        }
+
+        .title {
+          font-size: 15px;
+          font-weight: 500;
+    
+          @include md {
+            font-size: 30px;
+            font-weight: 700;
+          }
+        }
+    
+        .sub-title {
+          font-size: 10px;
+          font-weight: 300;
+    
+          @include md {
+            font-size: 20px;
+            font-weight: 500;
+          }
+        }
+
+        .rating{
+          font-size: 10px;
+          margin-left: 10px;
+          .icon {
+            font-size: 8px;
+            color: rgb(211, 179, 21);
+            margin-right: 5px;
+          }
+
+          @include md {
+            font-size: 20px;
+            margin-left: 30px;
+            .icon {
+              font-size: 18px;
+            }
+          }
+          
+        }
+
+        .overview {
+          display: none;
+          width: 100%;
+          @include md {
+            display: block;
+            font-size: 15px;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+
+  .opacity-layer {
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(180deg,
+        rgba(4, 21, 45, 0) 0%,
+        #0D0C11 79.17%);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    @include md {
+      height: 350px;
+    }
+  }
+}
