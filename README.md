@@ -2,6 +2,8 @@
 
 Welcome to Movymart, your ultimate movie and tv shows companion! Dive into a world of endless entertainment with our user-friendly platform. Explore a vast collection of movies, tv shows from timeless classics to the latest blockbusters, all in one place. Discover recommendations, popular and upcoming movies. Whether you're into action, romance, comedy, or documentaries, we've got you covered. Plan your movie nights effortlessly by browsing through detailed information, trailers, ratings.
 
+[Demo](https://movymart.vercel.app)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
