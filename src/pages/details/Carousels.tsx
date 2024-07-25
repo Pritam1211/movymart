@@ -10,7 +10,7 @@ const Carousels = ({ type, title, url }: any) => {
       title={title}
       data={data?.results}
       loading={loading}
-      endpoint={type}
+      type={type}
     />
   )
 }

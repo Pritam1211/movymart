@@ -24,7 +24,7 @@ const Popular = () => {
       <Carousel
         data={data?.results}
         loading={loading}
-        endpoint={endpoint}
+        type={endpoint}
       />
     </section>
   );

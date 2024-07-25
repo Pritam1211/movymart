@@ -11,16 +11,17 @@ import dayjs from 'dayjs';
 import "./style.scss";
 type Props = {
   data: MediaDetails,
-  fromSearch?: any
+  fromSearch?: any,
+  type?: string
 }
-const MovieCard = ({ data, fromSearch }: Props) => {
+const MovieCard = ({ data, fromSearch, type }: Props) => {
   const { urls } = useSelector((state: RootState) => state.home);
   const navigate = useNavigate();
   return (
     <div
       key={data.id}
       className="movie-card"
-      onClick={() => navigate(`/${data.media_type}/${data.id}`)}
+      onClick={() => navigate(`/${type}/${data.id}`)}
     >
       <div className="poster-block">
         <Img src={data.poster_path ? urls.poster + data.poster_path : PosterFallback} />

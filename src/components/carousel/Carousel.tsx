@@ -10,11 +10,11 @@ import MovieCard from "../movieCard/MovieCard";
 type Params = {
   data: MediaDetails[],
   loading?: boolean | null,
-  endpoint?: string,
+  type?: string,
   title?: string
 }
 
-const Carousel = ({ data, loading, endpoint, title }: Params) => {
+const Carousel = ({ data, loading, type, title }: Params) => {
   const carouselContainer = useRef<HTMLDivElement>(null);
 
   const navigation = (dir: string) => {
@@ -62,7 +62,7 @@ const Carousel = ({ data, loading, endpoint, title }: Params) => {
           {!loading ? (
             <div className="carousel-items" ref={carouselContainer}>
               {data?.map((item) => (
-                  <MovieCard key={item.id} data={item} />
+                  <MovieCard key={item.id} data={item} type={type} />
                 )
               )}
               <div className="left-opacity"></div>

@@ -79,7 +79,6 @@ const Explore = () => {
   }, [type]);
 
   const onChange = (selectedItems: any, action: any) => {
-    console.log(selectedItems, action)
     if (action.name === "sortby") {
       setSortby(selectedItems);
       if (action.action !== "clear") {
@@ -154,6 +153,7 @@ const Explore = () => {
                     <MovieCard
                       key={index}
                       data={item}
+                      type={type}
                     />
                   );
                 })}
